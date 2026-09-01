@@ -1,0 +1,13 @@
+metric	value	unit	note
+force_field	DNA.bsc1/TIP3P	text	parameterization used for the smoke test
+total_md_time	250	ps	50 ps NVT + 100 ps restrained NPT + 100 ps unrestrained NPT
+timestep	2	fs	integration timestep
+passed_stages	9/9	text	six minimizations plus three MD stages
+heavy_atom_rmsd_mean	1.1215	angstrom	100 ps unrestrained-NPT analysis window
+heavy_atom_rmsd_final	1.4453	angstrom	final frame
+backbone_rmsd_mean	1.2897	angstrom	100 ps unrestrained-NPT analysis window
+hydrogen_bonds_mean	2.9783	count	all specified canonical pairs
+frame_fraction_hbonds_at_least_2	0.9900	fraction	all specified canonical pairs
+basepair_step_rise_mean	3.2964	angstrom	Curves+- derived descriptor
+basepair_step_twist_mean	34.5113	degree	Curves+- derived descriptor
+hard_failure_tokens	0	count	CUDA/NaN/SHAKE/LINMIN/VDW checks

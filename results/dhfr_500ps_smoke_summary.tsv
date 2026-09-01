@@ -1,0 +1,10 @@
+metric	value	unit	note
+engine	pmemd.cuda	text	CUDA engine
+simulation_length	500	ps	NVT smoke-test duration
+timestep	2	fs	integration timestep
+completed_steps	250000	steps	final reported step
+final_window_temperature_mean	299.698	K	last 20 reported samples
+final_window_temperature_min	295.450	K	last 20 reported samples
+final_window_temperature_max	304.910	K	last 20 reported samples
+reference_energy_max_relative_difference	4.502018e-08	fraction	20-step official-reference comparison
+hard_failure_tokens	0	count	CUDA/NaN/SHAKE/LINMIN/VDW checks
