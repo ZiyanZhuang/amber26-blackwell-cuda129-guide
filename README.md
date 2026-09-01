@@ -46,7 +46,7 @@ python scripts/render_result_figures.py
 ## Fast path
 
 ```bash
-git clone https://github.com/YOUR_ACCOUNT/amber26-blackwell-cuda129-guide.git
+git clone https://github.com/ZiyanZhuang/amber26-blackwell-cuda129-guide.git
 cd amber26-blackwell-cuda129-guide
 
 # Use only your licensed source tree and writable, non-transient storage.
