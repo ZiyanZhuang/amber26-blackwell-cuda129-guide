@@ -26,6 +26,8 @@ Amber remains separately licensed by the Amber project. Obtain your Amber 26 sou
 
 The record above documents one working build-and-test environment. It is not a blanket compatibility guarantee for every driver, compiler, scheduler, or Amber patch level.
 
+An additional sanitized local validation note for a GeForce RTX 5060 on WSL2 is in [docs/rtx5060-wsl.md](docs/rtx5060-wsl.md). It records the same `sm_120` target on an 8-GiB-class card, including a real GPU canary and a 4096-water throughput run; it is not a blanket guarantee for every RTX 5060 system.
+
 ## Evidence, with scope stated plainly
 
 | Case | Protocol | Observed result | What this supports |

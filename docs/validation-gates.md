@@ -13,7 +13,7 @@ This project treats a successful compilation as necessary but insufficient. A PM
 
 ## Non-negotiable error policy
 
-Treat the following as hard failures even if a process exits with code zero: `NaN`, `Inf`, `CUDA_ERROR`, `FATAL`, `SHAKE`, `REPEATED LINMIN FAILURE`, `VDW` overflow, or extreme gradients. Preserve the original log before retrying, then change one variable at a time.
+Treat the following as hard failures even if a process exits with code zero: `NaN`, `Inf`, `CUDA_ERROR`, `FATAL`, a reported SHAKE failure, `REPEATED LINMIN FAILURE`, a reported LINMIN failure, VDW overflow, segmentation fault, abort, or extreme gradients. A normal `SHAKE:` section header is not an error by itself. Preserve the original log before retrying, then change one variable at a time.
 
 ## What these gates do and do not establish
 

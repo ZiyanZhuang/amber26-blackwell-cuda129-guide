@@ -1,0 +1,3 @@
+device	workload	precision	steps	dt_ps	wall_seconds	ns_per_day	exit_code	hard_failure_scan
+RTX 5060	official 4096-water reference	SPFP	1000	0.001	1.71	214.8	0	pass
+RTX 5060	official 4096-water reference	DPFP	1000	0.001	6.97	13.9	0	pass

@@ -13,10 +13,12 @@ echo '== CUDA libraries resolved by PMEMD =='
 ldd "$ENGINE" | grep -E 'libcuda|libcudart|libnvrtc' || true
 echo '== Architecture check =='
 if command -v cuobjdump >/dev/null 2>&1; then
-  if cuobjdump --list-elf "$ENGINE" | grep -q 'sm_120'; then
+  arch_dump="${ARCH_DUMP:-${TMPDIR:-/tmp}/pmemd_cuda_architecture.txt}"
+  cuobjdump --list-elf "$ENGINE" > "$arch_dump"
+  if grep -q 'sm_120' "$arch_dump"; then
     echo 'PASS: sm_120 code object detected'
   else
-    echo 'WARN: sm_120 was not found by cuobjdump; require the real-GPU canary before accepting this build.'
+    echo "WARN: sm_120 was not found by cuobjdump (full output: $arch_dump); require the real-GPU canary before accepting this build."
   fi
 else
   echo 'WARN: cuobjdump unavailable; require the real-GPU canary before accepting this build.'
